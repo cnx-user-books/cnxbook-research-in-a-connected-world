@@ -1,0 +1,70 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>nanoCMOS Device, Circuit and System Simulations</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32874</md:content-id>
+  <md:title>nanoCMOS Device, Circuit and System Simulations</md:title>
+  <md:abstract>This chapter introduces the nanoCMOS project as an example of e-Research successfully applied to engineering of microprocessor circuits.</md:abstract>
+  <md:uuid>84c2d1f1-1d20-451d-8dd8-ee155b71d1e2</md:uuid>
+</metadata>
+<content>
+<para id="eip-783"><title>Co-Authors:</title>G. Stewart (<emphasis effect="italics">National e-Science Centre, University of Glasgow</emphasis>)<newline/>
+A. Asenov, C. Millar, D. Reid, G. Roy, S. Roy (<emphasis effect="italics">Dept of Electronics and Electrical Engineering, University of Glasgow</emphasis>)<newline/>
+C. Davenhall (<emphasis effect="italics">National e-Science Centre, University of Edinburgh</emphasis>)<newline/>
+B. Harbulot, M. Jones (<emphasis effect="italics">e-Science North West, University of Manchester</emphasis>)
+</para><para id="delete_me"><title>Key concepts</title><list id="eip-id13494419">
+  <item>Use of 3D simulations to understand statistical fluctuations across devices</item>
+  <item>Infrastructure to address security issues</item>
+  <item>Results and progress in the management of device variability</item>
+</list>
+<note id="n1">
+Please note that there is a <link document="m32619" target-id="p_nanoCMOSvideo">related video</link>.
+</note>   
+
+</para><section id="eip-510"><title>Introduction</title><para id="eip-38">
+The increasing variability present in modern CMOS devices demands revolutionary changes in the design methodology, algorithms and tools used to produce integrated circuits and systems. Progressive scaling of CMOS transistors has driven the success of the global semiconductor industry, as captured by the reknowned Moore’s Law which stipulates an exponential increase of the number of transistors in chips, with some modern chips now comprising several billion transistors. Until recently the transistors in silicon chips were assumed to be of uniform design, having identical physical properties and characteristics. However as illustrated in Figure 1, as transistor dimensions approach the nanometer scale this assumption no longer holds true with microscopic differences in atomic structure, doping configuration and material granularity producing differences in the macroscopic behaviour of individual devices. 
+</para>
+<para id="eip-id1165315397495">As a result Moore’s Law as tracked by the <link url="http://www.itrs.net">International Technology Roadmap for Semiconductors</link> (ITRS) is now reaching the physical, atomistic limits of silicon and radical new approaches are needed that encompass this atomistic variability. To address this problem, it is now widely recognized that a paradigm shift must happen in circuit and system design. Strong links have to be established between system, circuit and fundamental device technology research in order to allow modern integrated circuits to cope with the statistically varying behaviour of individual transistors on a chip. Design methods must evolve to accommodate the increasing statistical variability of transistors and absorb the impact that this can have on circuit and system performance. The nanoCMOS project confronts these engineering challenges. This chapter introduces the project in detail and concludes with a brief look at future work in this area.
+</para><para id="eip-686"><figure id="fig_transistor"><media id="transistor" alt="image of an ideal transistor, of a 22nm and a 4.2nm MOSFET">
+    <image mime-type="image/png" src="../../media/Transistor.png" width="500px"/>
+  </media>
+  
+<caption>Origin of atomic scale variability in nano CMOS transistors
+  </caption></figure></para></section>
+<section id="eip-275"><title>The nanoCMOS Project: Innovative Engineering</title><para id="eip-849">Changing design rules for new device architectures and device variability adds significant complexity to the design process, requiring the orchestration of a broad spectrum of tools by geographically distributed teams of device experts, circuit and system designers. In the nanoCMOS project the challenges that this working method presents are being addressed by embedding e-Science technology and know-how in the device modeling and design groups and changing the ways in which these disparate groups currently work. The <link url="http://www.nanocmos.ac.uk">nanoCMOS project</link> was funded for 4 years and started in October 2006. It involves collaboration between world leading device modelling and circuit and system design research groups at the universities of Glasgow, Edinburgh, Manchester, Southampton and York. This academic grouping is enhanced by strong links and collaboration with industrial partners including leading semiconductor, EDA tool vendors and design companies such as Freescale, Fujitsu, National Semiconductor, Synopsis, ARM, Wolfson Microelectronics amongst others.  The project will provide valuable insights for industry on the challenges faced in the nanoCMOS domain and how the global semiconductor industry can address them.
+</para><para id="eip-418">In order to study the statistical fluctuations introduced by the discreteness of charge and matter it is necessary to perform 3D simulations of very large ensembles of hundreds of thousands of devices, rather than a single representative device. Given the increasing number of transistors in modern chips, simulation of very large statistical samples of devices is required to allow statistically rare devices with potentially fatal effects on circuit performance and functionality to be examined. This requires access to significant distributed high performance computing resources, including the <link url="http://www.ngs.ac.uk">UK e-Science National Grid Service</link>, <link url="http://www.scotgrid.ac.uk">ScotGrid</link> and a wide variety of other resources including Condor pools and campus clusters across partner sites. However, this is not simply another large scale simulation problem, since the commercially sensitive nature of the information and stringent IP protection requirements necessitate fine grained security on access to, and usage of, licensed software; protection of the intellectual property associated with circuit and device designs, data and simulations belonging to industrial partners and key stakeholders. </para><para id="eip-571">To this end, the project has developed an infrastructure capable of providing comprehensive security. This includes exploitation of Kerberos for secure global file based access through the Andrews File System; authorization technologies such as PERMIS for definition and enforcement of access policies using centralized attribute authorities such as the Virtual Organisation Membership Service (VOMS), and simple user-oriented access to a project portal through the Internet2 Shibboleth technology using the UK Access Management Federation. Furthermore, the project has identified that a key challenge is in data annotation and management. The simulations that are undertaken can generate large quantities of data and meta-data and the electronics domain unlike other domains does not have agreed standards on data format, rather, the data formats tend to be driven by commercial tool providers.
+</para><para id="eip-10"><figure id="fig_res_usage" orient="vertical"><subfigure id="fig_res_usage1">
+    <media id="res_usage1" alt="">
+      <image mime-type="image/png" src="../../media/ResourceUsage1_web.png" width="600"/>
+    </media>
+    <caption>Total CPU time per VO between 16.11.2006 and 19.3.2009</caption>
+  </subfigure>
+  <subfigure id="fig_res_usage2">
+     <media id="res_usage2" alt="">
+       <image mime-type="image/png" src="../../media/ResourceUsage2_web.png" width="600"/>
+     </media>
+     <caption>Total number of submitted jobs per VO between 16.11.2006 and 19.3.2009</caption>
+  </subfigure>
+<caption>nanoCMOS Resource Usage on ScotGrid</caption></figure></para><para id="eip-254">Traditionally, due to the computational complexity of 3D device simulation, studies of variability have been based on small ensembles of devices typically up to 200 devices and simulations on much larger scale have hitherto never been undertaken. Simulations of ensembles of up to 100,000+ devices enabled by the grid technology are shedding new light on the impact of atomic structure variation on the behaviour of devices, especially at the extreme limits of device variability. Furthermore, based on these simulations, we have been able to examine the effect of device variability at a simple circuit level and have simulated over 1 million CMOS inverters using random configurations of devices. Figure 3(a) shows the potential and dopant position of a statistically rare device. Figure 3(b) shows the threshold voltage variation as a function of the number of dopants.</para>
+<para id="eip-id1165693746187">
+<figure id="fig_dopant" orient="horizontal"><subfigure id="fig_dopant1">
+    <media id="dopant1" alt="">
+      <image mime-type="image/png" src="../../media/DopantAtoms1.png"/>
+    </media>
+    <caption>Potential/Dopant Distribution for Statistically Rare Device</caption>
+  </subfigure>
+  <subfigure id="fig_dopant2">
+     <media id="dopant2" alt="">
+       <image mime-type="image/png" src="../../media/DopantAtoms2.png"/>
+     </media>
+     <caption>Threshold Voltage Variation as Function of the Number of Dopant atoms in the transistor</caption>
+  </subfigure>
+</figure>
+</para></section><section id="eip-907"><title>Summary and Further Workd</title><para id="eip-458">The nanoCMOS project has shown the value of e-Research methods in the field of microprocessor circuit design.  Use of distributed high performance computing and other dispersed computing resources has allowed for large scale simulations that assist the CMOS design community in managing device variability.  The work on nanoCMOS is still progressing and higher level circuit and system design tools are being incorporated into the e-Infrastructure. The systems are being extended in numerous other ways including seamless access to multiple-HPC facilities depending upon user privileges.  Optimisation of job submission and management based upon data distribution and security constraints is another area that is currently being investigated. More information on the nanoCMOS project is available at <link url="http://www.nanocmos.ac.uk">www.nanocmos.ac.uk</link>, or through contacting Prof. Asenov (a.asenov@elec.gla.ac.uk - science related questions) or Prof. Sinnott (r.sinnott@nesc.gla.ac.uk - e-Infrastructure related questions).
+</para></section><section id="eip-807"><title>Acknowledgements</title><para id="eip-176">
+This work was funded by a grant from the UK Engineering and Physical Sciences Research Council. We gratefully acknowledge their support.
+</para></section><section id="eip-14"><title>References</title><para id="ref1">Sinnott, R.O. <foreign>et al.</foreign> (2006). Meeting the Design Challenges of nanoCMOS Electronics: An Introduction to an EPSRC Pilot Project. <emphasis effect="italics">UK e-Science All Hands Meeting</emphasis>, Nottingham UK, September.</para>
+<para id="ref2">Reid, D. <foreign>et al.</foreign> (2008). Prediction of Random Dopant Induced Threshold Voltage Fluctuations in NanoCMOS Transistors <emphasis effect="italics">International Conference on Simulation of Semiconductor Processes and Devices</emphasis>, Sept.</para></section>
+</content>
+
+</document>

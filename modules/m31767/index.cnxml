@@ -1,0 +1,101 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>e-Malaria</title>
+  <metadata>
+  <md:content-id>m31767</md:content-id><md:title>e-Malaria</md:title>
+  <md:abstract/>
+  <md:uuid>e9cfc7c0-7972-4945-828a-48172bbf4b83</md:uuid>
+</metadata>
+
+<content>
+    
+    
+    
+    
+    <para id="id5453974"><emphasis>Key Concepts</emphasis></para>
+    <list id="id10994216" list-type="bulleted"><item>Computational drug design – docking programs</item>
+<item>Drug target</item>
+<item>eMalaria project as outreach – linking research and teaching</item>
+<item>3D Stereochemistry</item>
+<item>SMILES (Simplified Molecular Input Line Entry System)</item>
+
+    </list>
+    <section id="id2719277"><title>Introduction: Motivation and Drug Design</title><para id="id6889887">The original motivation for the <link url="http://emalaria.soton.ac.uk">eMalaria project</link> was to bring together school students with university researchers in the hunt for a new anti-malarial drug. The challenge was offered, via the web, to school students to design molecules and test them using a computational drug design approach to see if the molecule might be suitable for further research as an anti-malarial drug. The participants were not merely going to be passive suppliers of computational resources in the model of the very successful cycle stealing grid drug screening systems as pioneered by <link url="http://www.chem.ox.ac.uk/curecancer.html">Graham Richard’s group</link> and followed most recently by the <link url="http://www.worldcommunitygrid.org/">World Community Grid</link>. Instead, they were involved with the design and selection of potential drug molecules so that they could learn more about modern approaches to drug design and development. This necessitated a significant amount of background and tutorial material to support the investigations.</para>
+      <para id="id7020367">At its core the eMalaria system uses the <link url="http://www.ccdc.cam.ac.uk/">Cambridge Crystallographic Data Centre</link> and the <link url="http://www.ccdc.cam.ac.uk/products/life_sciences/gold/">Gold docking engine Software</link>. The docking program needs to investigate the whole conformational space of the potential drug and its fit into the enzyme active pocket. Gold evaluates the quality of the fit with an energy scoring function. This function takes into account the main contributions to the forces acting between the atoms in the enzyme and the potential drug; the intermolecular forces as well as any strain imposed on the drug molecule. </para>
+      <para id="id12247534">
+        <figure id="id8454005"><media id="id8454005_media" alt="">
+            <image mime-type="image/png" src="../../media/graphics1-aff6.png" id="id8454005__onlineimage" height="169" width="238"/>
+          </media>
+        <caption>showing how the shape of the potential drug molecule influences the ability to bind into the pocket of the enzyme active site</caption></figure>
+      </para>
+      
+      <para id="id6569221">With even moderate sized molecules the size of the conformational space is very large. That is, there are very many ways in which the molecule can be twisted without breaking any bonds. Each different shape can produce different interactions between the potential drug and the enzyme pocket. It is a very significant calculation to evaluate these different possible ways in which the drug could bind into the pocket and locate the best fit. </para>
+      <para id="id6982085">
+<figure id="eip-id6456663">
+        <subfigure id="id9497015">
+          <media id="id9497015_media" alt="">
+            <image mime-type="image/png" src="../../media/graphics2.png" id="id9497015__onlineimage" height="122" width="138"/>
+          </media>
+        </subfigure>
+        <subfigure id="id14302468">
+          <media id="id14302468_media" alt="">
+            <image mime-type="image/png" src="../../media/graphics3-ac6b.png" id="id14302468__onlineimage" height="119" width="138"/>
+          </media>
+        </subfigure>
+<caption>Two possible conformations of the hydrocarbon butane demonstrating how rotation about carbon-carbon single bonds gives rise to different molecular shapes. For larger molecules with many possible ‘rotatable’ bonds a very large number of conformations are possible. (Images from Wikipedia)</caption>
+</figure>
+      </para>
+      <para id="id4331533">To support the anticipated computational load and provide a model that would grow in capacity in parallel with the increase in users, we chose to use a cycle steeling grid. Several machines within the University of Southampton initially provided the computational resource. The expectation was that as schools joined the project they would provide additional computational cycles. This was made possible while protecting the commercial code by using the <link url="http://www.univaud.com/">United Devices (UD)</link> software, which ensured that the core Gold code was secure.</para>
+      <para id="id13897627">To supply the docking engine we originally built software to enable molecules to be drawn and converted from a 2D sketch to a 3D model with a realistic molecular conformation using empirical rules and molecular mechanics and semi-empirical quantum codes. The drug target for the initial studies was the DHFR protein, chosen for the different way the DHFR protein is regulated in mosquitoes and humans, which makes it very suitable as a target to block. The structure of the DHFR protein was obtained from the <link url="http://www.pdb.org/pdb/">protein data bank (PDB)</link> and a scoop suitable for docking produced.</para>
+      <para id="id8828185">The scripts developed set up the computational job, bringing together the molecule submitted by the user with the drug target, and then submitted the job to the UD system. Web interfaces were provided to keep track of the individual’s runs and allowed the 2D, 3D molecular and docked structures to use the very versatile Java based <link url="http://jmol.sourceforge.net/">Jmol program</link>. Keeping track of structures and results for each user required some system to identify the users. We were careful to collect no personal information as we had to be sure that we were clear of any data protection requirements, especially in regard to those users who might be under 18 years of age. In subsequent use for undergraduate teaching we linked the eMalaria system to the University (LDAP) authentication system, allowing access to designated students.</para>
+      <para id="id3399976">The site was designed to be as accessible as possible for students with special educational needs, particularly those with dyslexia. Information is presented in manageable amounts and boxed away from the navigation tools to avoid confusion. The website has been designed to use cascading style sheets (CSS) to allow students to pick the text font, colour and background that makes it easiest for them to read the website. At all times the user’s built in browser settings are able to override the standard website style sheet. This means that if a user has set their computer up to give the best font and colour options for them, our site will follow these instructions. A text only version is available to make the site accessible to students using a screen reader, and the downloadable documents are available as word documents so that font colour and size can be changed before printing if necessary. The site and associated materials have been designed in accordance with the <link url="http://www.bdadyslexia.org.uk/">British Dyslexia Association</link>’s guidance, which turned out to provide a good visual feel for all students.</para>
+    </section>
+    <section id="id13727200">
+      <title>Details of the Project</title>
+      <section id="id13931666">
+        <title>Initial Outreach &amp; Schools Project</title>
+        <para id="id10357694">The eMalaria system was used in a number of schools in the region and supported by visits by the team. The project was also supported by workshops and talks delivered by project team members at the request of participating schools. The general format of these consisted of a 45-minute talk covering drug design methodology and how the project follows these principles, followed by a 45 minute session where students were given a compound to use as a lead for modification. Students then tried to find modifications to this molecule that would lead to better docking scores. The visualization of molecular shape was highly productive in supporting chemical education and the drug challenge taken up actively by many of the students; some interesting molecules resulted. We deployed the system for a number of University Open Days with perhaps the youngest participant being about 6 years old; this group designed molecules that came close to breaking the system!</para>
+        
+        <para id="id8964843"><figure id="eip-id7131165"><subfigure id="eip-id1170761009856"><media id="eM1" alt="">
+<image mime-type="image/jpeg" src="../../media/FreyeMalaria1.jpg" width="120px"/>
+</media></subfigure>
+<subfigure id="eip-id1170761682807"><media id="eM2" alt="">
+<image mime-type="image/jpeg" src="../../media/FreyeMalaria2.jpg" width="120px"/>
+</media></subfigure>
+<subfigure id="eip-id1170766884284"><media id="eM3" alt="">
+<image mime-type="image/jpeg" src="../../media/FreyeMalaria3.jpg" width="120px"/>
+</media></subfigure>
+
+
+<caption>An example of (a) a potential drug molecule 
+rendered in 3D, (b) the DHFR protein and (c) the docked drug in the DHFR active site.</caption></figure></para>
+        <para id="id11470269">We found that the display of the highest docking score achieved by a School or Open Day group was a valuable incentive to try and develop a molecule with a higher score. Tools to manage a group collectively were very useful in motivating and providing feedback to a class.</para>
+      </section>
+      <section id="id11887284">
+        <title>Evolution of the project</title>
+        <para id="id8473978">New chemical services became available as the project moved forward and in its new incarnation it makes use of one of the available 2D molecular sketch packages (<link url="http://www.chemaxon.com/marvin/">Marvin</link> from <link url="http://www.chemaxon.com/">ChemAxon</link>) and the 3D optimization within this package. This reduced the number of bespoke services which we needed to provide, but removed some of the filtering for sensible molecules that we had previously put in place. We supplied additional interfaces to be able to automate the molecular design, and the <link url="http://www.daylight.com/smiles/">SMILES</link> input has proved very useful for more advanced teaching applications with undergraduates. It is now easier to bring many structures from a paper, for example, into the eMalaria system and to manipulate them as we did in automatically constructing the SMILE sequences for all the possible tri-peptides from the 20 most common naturally occurring amino-acids.</para>
+        <para id="id6714013">As well as serving as a general reminder of 3D stereochemistry and examples of using SMILE strings, we made extensive use of the eMalaria system in the final year undergraduate course on Chemical informatics for which the students, as part of their project work, were required to build a QSAR (Quantitative Structure Activity Relationship) model to model docking score based on simple descriptors that were calculated using web based freely accessible programs (e.g. molecular mass, volume, LogP).<emphasis effect="bold"/>More recently the task set the undergraduate class was to model real experimental data on inhibitors of Plasmemsin taken from the literature (K. Ersmark etal, J. Med Chem. 2005, <emphasis effect="bold">48</emphasis>, 6090-6106), using the eMalaria docking scores as one of the possible descriptors in the QSAR model of inhibitor activity.</para>
+      </section>
+      <section id="id7227716">
+        <title>Summary and Future Plans </title>
+        <para id="id8502897">The eMalaria approach to outreach and teaching was formally evaluated as part of the eBank project with a review of the material and interviews with students who had used eMalaria as part of their course. Typical teaching scenarios for using eBank and eMalaria included getting students to retrieve small molecules from the <link url="http://www.ukoln.ac.uk/projects/ebank-uk/">eBank</link> and <link url="http://ecrystals.chem.soton.ac.uk/">eCrystals</link> systems and then putting them into the eMalaria site in order to undertake a range of manipulations and investigations. Such a linkage between eBank, eCrystals and eMalaria provides a demonstration of a means of explicitly integrating research activities with learning and teaching practice. The course was designed to progressively build up complexity and use of real and authentic data, clearly linked and of relevance to work-based learning, which was timely, as these students had just completed their six-month work placement. Very positive outcomes were noted and the lesson of linking research and teaching is exploited in the outreach context as well as in university teaching.</para>
+        <para id="id3710724">Returning to our original aims of outreach to the school community, eMalaria now has a presence on the University of Southampton’s island in Second Life. A ‘fruit machine’ allows a visitor to the island to select three amino acids to make a tri-peptide. The molecule is rendered as a floating 3D image and the docking score against the DHFR enzyme target is shown. In the future a visitor will be able to design more general molecules and obtain a docking score by launching an eMalaria calculation against a selected target.</para>
+        <para id="id11484662">The eMalaria system is actively being used in undergraduate teaching but currently less so for outreach. We are planning to increase the support for the system and to make it available again regionally and nationally with the addition of more computational power. We are exploring distributed computing solutions with other systems such as BOINC to see if they can provide a more appropriate solution for some of the longer calculations that could be useful in advanced teaching. This project has shown the wider impact of e-Research through its involvement of young students in the process of drug design. While learning how to design molecules using computer-enabled methods, students also provided research results which have fed into university researchers’ work on finding anti-malarial drugs. Projects such as this one can not only lead to new discoveries but also inspire students to become enthusiastic about science early on.</para>
+      </section>
+    </section>
+    <section id="id8499450">
+      <title>Acknowledgments</title>
+      <para id="id8694205">Thanks to EPSRC and JISC for the financial contributions, CCDC for making the Gold software available, and Robert Gledhill, Sarah Kent, Andrew Milsted, Brian Hudson, Steve Wilson, Simon Coles and Jon Essex for their contributions to the project.</para>
+    </section>
+    <section id="id6988036">
+      <title>Bibliography</title>
+      <para id="id8227300">The eMalaria website <link url="http://eMalaria.soton.ac.uk/">http://eMalaria.soton.ac.uk</link></para>
+      <para id="id8165630">http://www.rsc.org/chemistryworld/News/2005/July/07070501.asp</para>
+      <para id="id9406029">Frey, Jeremy G., Gledhill, Robert J., Milsted, Andrew, Kent, Sarah, Essex, Jon W. and Richards, G.W. (2006) A computer-aided drug discovery system for chemistry teaching. In, American Chemical Society 232 National Meeting, San Francisco, USA, 10-14 Sep 2006. USA, American Chemical Society.</para>
+      <para id="id11744019">Frey, Jeremy G., Gledhill, Robert, Kent, Sarah, Hudson, Brian and Essex, Jon (2006) Schools Malaria Project. In, Proceedings of the UK e-Science All Hands Meeting 2005. UK, Engineering and Physical Science Research Council. (UK e-Science All Hands Meeting 2005).</para>
+      <para id="id15522442">Geldhill, Robert, Kent, Sarah, Milsted, Andrew, Chapman, Richard, Essex, Jonathan. W. and Frey, Jeremy. G. (2008) e-Malaria: the schools Malaria project. Concurrency and Computation: Practice &amp; Experience, 20, (3), 225-238. (doi:10.1002/cpe.1193)</para>
+      <para id="id8066314">Gledhill, Robert, Kent, Sarah, Hudson, Brian, Richards, W. Graham, Essex, Jonathan W. and Frey, Jeremy G. (2006) A computer-aided drug discovery system for chemistry teaching. Journal of Chemical Information and Modeling, 46, (3), 960-970. (doi:10.1021/ci050383q)</para>
+      <para id="id9712550">Woodgate, Dawn and Fraser DanaÎ S., eScience and Education 2005: A Review</para>
+      <para id="id8871520">http://www.jisc.ac.uk/media/documents/programmes/eresearch/escienceineducation_study_final.pdf</para>
+    </section>
+  </content>
+</document>

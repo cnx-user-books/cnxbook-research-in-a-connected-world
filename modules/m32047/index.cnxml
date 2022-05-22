@@ -1,0 +1,74 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+
+<title>The EGEE Distributed Computing Infrastructure</title>
+<metadata>
+  <md:content-id>m32047</md:content-id><md:title>The EGEE Distributed Computing Infrastructure</md:title>
+  <md:abstract>This section will provide an introduction to the Enabling Grids for E-sciencE project.</md:abstract>
+  <md:uuid>d554a455-5a33-428c-8319-17952a0de6af</md:uuid>
+</metadata>
+
+<content>
+  <para id="delete_me"><title>Key Concepts</title><list id="eip-id1168855856607">
+<item>gLite middleware, providing access to shared resources</item>
+<item>Security and access to resources</item>
+<item>Data storage</item>
+<item>Compute resources</item>
+<item>Deployment of the infrastructure</item>
+<item>Application development</item>
+</list>
+</para><section id="eip-429"><title>Introduction</title><para id="eip-855">
+The <link url="http://www.eu-egee.org/">Enabling Grids for E-sciencE (EGEE)</link> project provides an e-Research platform to the European research community and their international collaborators for high throughput data analysis for over 17,000 users across 160 projects. With a heritage stretching back over nearly a decade, EGEE-III (and its proceeding projects EGEE-II, EGEE-I and the European Data Grid) is a 32M € project funded by the European Commission to implement and deploy a distributed computing infrastructure to support researchers in many scientific domains, such as astrophysics, biomedicine, computational chemistry, earth sciences, high energy physics, finance, fusion, geophysics and multimedia. In addition, there are several applications from business sectors running on the EGEE Grid, such as applications from geophysics and the plastics industry.  This chapter introduces the EGEE project in detail, considering middleware, security issues, access to information, data, compute resources, deployment and application development.  It concludes with a look at sustainability.
+</para><para id="eip-925"><figure id="EGEEWorld">
+  <media id="EGEEWorld_Image" alt="EGEE nodes mapped onto globe">
+    <image mime-type="image/png" src="../../media/EGEEWorld.png"/>
+  </media>
+  <caption>
+     EGEE nodes mapped onto the globe
+  </caption>
+</figure>
+
+</para></section><section id="eip-72"><title>Facilitating Access To Shared Resources – the gLite Middleware</title><para id="eip-731">
+Grids are characterised by decentralised access to shared resources. These resources consist of computers, disks, and the network connections that link them together. Seamless, secure and scalable access to these resources, which may be owned by different organisations and could encompass different operating systems and architectures, is provided through software called <emphasis>middleware</emphasis>. Organisations that wish to cooperatively share their resources with their collaborators can do so without central control.
+</para><para id="eip-689">The gLite middleware distribution produced by the EGEE project is composed primarily of open-source software from many sources – some developed within the project and others from external providers. This software is integrated into a single software distribution before being tested and made available to sites for installation. </para><para id="eip-610"><figure id="EGEELayers">
+  <media id="EGEELayers_Image" alt="Layers of the EGEE e-Infrastructure">
+    <image mime-type="image/png" src="../../media/EGEE_Layers.png"/>
+  </media>
+  <caption>
+    Layers of the EGEE e-Infrastructure
+  </caption>
+</figure>
+</para><para id="eip-906">The software services used within gLite are there to enable researchers, through their own applications, to access the physical resources (disks, computers, instruments) that are attached to the EGEE infrastructure. These services have defined interfaces which allow developers to build their own applications.</para></section><section id="eip-322"><title>Security</title><para id="eip-809">
+The resources that make up the EGEE infrastructure are extremely valuable and access to these resources needs to be strictly controlled. Access to resources within EGEE is restricted to members of research collaborations (commonly called Virtual Organisations). Some resources may only allow individuals from a single Virtual Organisation to access their resources, while other resource providers will provide a shared resource to multiple Virtual Organisations spanning several research communities.
+</para><para id="eip-221">To join a Virtual Organisation you need to be able to prove who you are electronically. This is similar to the way that a passport is used to prove your identity when you cross international borders. Within the Grid community this is frequently done through the use of a certificate – generally issued by proving your identity to someone at your local institute. Some organisations allow you to generate a certificate through your existing ability to access your organisation’s own network.</para><para id="eip-756">Once you are able to identify yourself you can apply to join a Virtual Organisation. Different Virtual Organisations exist to cover the needs of different communities. A community may have more than one Virtual Organisation within it with each one having different entry criteria and possibly providing access to different resources. </para></section><section id="eip-223"><title>Information</title><para id="eip-269">
+With many thousands of services potentially available to a user, discovering which one to use presents many challenges. The infrastructure is continually changing – services are appearing, disappearing or being upgraded as the sites evolve. Being able to discover, in near real-time, the types of services that are available, the Virtual Organisations that are able to access them, and the characteristics of each service (i.e. the data that it stores or the speed of the processors), and the load on the service, are all information points that can drive which service to select.
+</para><para id="eip-892">The information collected by gLite on the resources within the infrastructure can be presented in many ways. The information can be browsed directly through a web portal, searched manually through command line tools, or programmatically from within an application.</para></section><section id="eip-79"><title>Data</title><para id="eip-295">
+Many of the researchers that use EGEE’s infrastructure do so in order to analyse data stored in files. Frequently these files are stored at locations different from the currently available computational resources. EGEE provides services that allow users to retrieve a file from off-line tape storage onto disk, and to then move that file to the site where the computational resources for that user is going to be available. (This method of data storage and retrieval is normal in high energy physics experiments and frequently used in other communities dealing with large archived data sets such as climate modelling and satellite observation records.) 
+</para><para id="eip-216">How does a user locate the file that they need to use on an infrastructure where the location of files is continually changing? File catalogues run by some communities provide a register where a ‘logical’ file name can be mapped to a number of physical replicas. Having files stored in multiple places has many benefits - files are still available even if one of the sites storing the files is temporarily disconnected from the network or the service is down. Software can be written to exploit the distributed location of the files so as to run an application on the computing resources located near to their storage location – thereby reducing the time taken to move the files from their storage location to the compute resources.</para><para id="eip-922">Many of EGEE's sites are linked together through dedicated network connections. EGEE provides a service that is able to coordinate the bulk transfer of files across the network that allows the connection to be shared between different communities and file transfers to be managed and prioritised.</para></section><section id="eip-238"><title>Computing</title><para id="eip-744">
+Key to nearly all communities supported by EGEE is the ability to analyse file-based data. Generally, applications need to be installed on the compute resources before they can be used to analyse their data. Their availability on a resource is something that can be advertised through the information system and allows the user to select the resources where their applications are already available. These applications are then started through services that encapsulate the compute resource – regardless of the operating system or the internal structure of the compute cluster that will be used to analyse the data. 
+</para><para id="eip-650">The user, or their application, uses the EGEE information service to select a compute resource that they have access to and where their application is installed. Any input files needed by the application are transferred from the user’s computer, located in storage out on the EGEE infrastructure through the file catalogue, or by knowing its explicit location, to the compute resource that will be used for the analysis.  Once the file is in place, the request to start the application and analyse the file, is passed to the compute service. When the analysis is complete any output files will be available on the compute resource. If the user wishes the output files to remain available for future use they will need to be transferred back to the user’s desktop or stored elsewhere. </para><para id="eip-702">Within EGEE some user communities undertake this process manually by knowing where their files are and which compute resources they wish to use. Other communities have written their own applications that directly mimic the manual processes thereby simplifying the life of the user. EGEE provides a generic resource brokering service that is able to automatically perform these tasks for many of the core scenarios previously done manually by a user.</para><para id="eip-865"><figure id="EGEE_Architecture">
+  <media id="EGEE_Architecture_IMage" alt="EGEE Architecture">
+    <image mime-type="image/png" src="../../media/EGEE_Architecture.png"/>
+  </media>
+  <caption>
+    Overview of the architecture of EGEE
+  </caption>
+</figure>
+</para></section><section id="eip-218"><title>Accounting</title><para id="eip-119">
+As the compute, storage and network resources are contributed by different organisations for shared use by groups outside their organisations, it is important that this use is accounted for. Many organisations share their resources through ‘service level agreements’ that specify the proportions of the resource that can be used by different communities. Within EGEE the use of individual computing resources is accounted for and recorded centrally for later analysis and reporting. These usage agreements are validated through these centralised accounting records. Similarly, the volume of data transferred over the dedicated network links between the primary resource centres is also reported. This usage is generally reported for each Virtual Organisation using the infrastructure.
+</para></section><section id="eip-987"><title>Operations</title><para id="eip-285">
+Vital to EGEE, and for any project that aims to deploy and support an infrastructure, is its operational effectiveness and availability. EGEE's infrastructure is deployed in over 50 counties on over 280 sites and encompasses over 80,000 processors and 20PB of data enough to store 400 million four-drawer filing cabinets full of text or 50 million CDs – a stack around 50km high. This infrastructure is available continuously and supports over 300,000 jobs a day and the research network connecting these sites and the distributed user community sustains transfer speeds of over 900MB/s each day.
+</para></section><section id="eip-130"><title>A Platform for Application Development</title><para id="eip-142">
+Over the last decade the software interfaces to EGEE have stabilised, matured and now form a platform that provides a basis for external developers to build their own applications.   These developers come from both the research community, that use EGEE for their own work, and the broader software community that provide higher-level tools and services for the research community to use. Some of the latter work is starting to appear in the RESPECT programme (Recommended External Software for EGEE CommuniTies - http://technical.eu-egee.org/index.php?id=290) that aims to publicise software and services that work well in concert with the EGEE gLite software and thereby expand the functionality of the grid infrastructure for users, promote the reuse of existing software to reduce duplicated development, and to provide software more oriented to end users than the core gLite middleware distribution.
+</para><para id="eip-383">This activity has expanded over the last year and now includes various software packages:
+<list id="eip-id1165804089103">
+<item>meta-schedulers able to run unattended applications and their related workflows by dynamically selecting resources</item>
+<item>portals that provide access to EGEE’s resources through a web interface</item>
+<item>tools that simplify the specification and execution of applications – especially those that involve the execution of the same application over large sets of data</item>
+<item>services that provide access to data stored in files or in relational databases</item>
+<item>tools that help developers to build applications to access grid resources</item>
+</list></para></section><section id="eip-554"><title>Summary</title><para id="eip-864">
+As the EGEE-III project enters its final year work continues on improving the effectiveness, usability, availability and reliability of the infrastructure. The user community continues to expand and an increasing number of researchers are coming to depend on this e-Infrastructure as part of their regular daily work. In recognition of the increasing maturity of this e-infrastructure, the community has been studying over the last year how this infrastructure can be made more sustainable. The result, the European Grid Infrastructure (EGI), establishes a small organisation that federates and coordinates the work of independent National Grid Infrastructures (NGI) and is due to start in May 2010.  
+</para></section>
+</content>
+
+</document>

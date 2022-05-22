@@ -1,0 +1,76 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Computational Chemistry</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32928</md:content-id>
+  <md:title>Computational Chemistry</md:title>
+  <md:abstract>discusses the achievements and prospects for simulations of biomolecules</md:abstract>
+  <md:uuid>4f780fde-50d9-4823-a5ed-14f88f13c499</md:uuid>
+</metadata>
+
+<content>
+    
+    <para id="id8476534"><emphasis>Key Concepts</emphasis>
+<list id="key_concepts">
+<item>Simulation of Biomolecules</item>
+</list></para>
+<section id="section1">
+<title>Introduction</title>
+    <para id="id7271058">In many of the physical sciences, our theoretical understanding has developed alongside experimental discoveries, for example in the fields of electromagnetism, optics and semiconductor physics. Theory has provided the design principles which have then enabled engineers to maximise the potential applications of these new technologies. However, there are many instances in which simple phenomenological models cannot capture the complexity of the systems in question: notable examples are the chemistry of the atmosphere, which has implications for prediction of weather patterns and climate change, or the properties of materials at the nanoscale, such as chemically functionalised carbon nanotubes, which will become increasingly important in nanoengineering. </para></section>
+    <para id="id19408677">Arguably, the most complex materials of all are biological macromolecules; namely proteins, DNA, lipids, sugars and their interactions. Biological macromolecules routinely perform extraordinary functions such as biomolecular recognition (Figure 1a), enzyme catalysis, self-assembly (Figure 1b) and self-organisation. Moreover, there are many examples of molecular motors within the cell (Figure 1c). These are nanoscale machines capable of burning chemical energy to perform work. The theoretical challenge of understanding these systems is more than offset by the potential benefits. For example, our current understanding of molecular recognition has already enabled us to rationally design new drugs <foreign>in silico</foreign> to inhibit or promote a given biomolecular interaction; in the future nano-computer aided design may be used to design our own molecular devices of equivalent complexity to biological molecular motors, but which perform a bespoke function. </para>
+    <para id="id18038572">If we had an equivalent theoretical understanding of biological systems as we have of semiconductors, then whole new regimes of bio-inspired engineering at the nanoscale would become possible. To achieve this, we need to combine our existing physical understanding of mechanics and thermodynamics with a theoretical technique that is capable of including chemical complexity. The only suitable methodology is High Performance Supercomputing (HPC). </para>
+<figure id="figure1">
+<subfigure id="figure1a">
+<label>Molecular recognition: The Keap1 protein bound to the recognition element of its target.</label>
+            <media id="id19144801" alt="">
+                <image mime-type="image/png" src="../../media/Picture 1.png" width="200"/>
+              </media>  
+</subfigure>
+<subfigure id="figure1b">
+<label>Self assembly: An atomic model of a fragment of an amyloid fibril.</label>
+              <media id="id16863581" alt="">
+                <image mime-type="image/png" src="../../media/Picture 0.png" width="200"/>
+              </media>
+
+</subfigure>
+<subfigure id="figure1c">
+<label>Molecular motors: A DNA helicase bound to double stranded DNA.</label>
+  <media id="id8662408" alt="">
+                <image mime-type="image/jpg" src="../../media/Picture 5.jpg" width="200"/>
+              </media>
+
+</subfigure>
+<caption>Atomistic Molecular Dynamics Simulation: Keap1 Protein</caption>
+</figure>
+
+    <para id="id8880508">The most successful biomolecular simulation methods to date use Newtonian mechanics in conjunction with an empirical force-field to produce a mathematical model of the interactions between every single atom in the macromolecule with chemical accuracy; the calculation results in a series of molecular conformations (or a “movie”) that illustrates the changing shape of the biomolecule due to thermal fluctuations. </para>
+<figure id="figure2">
+  <media id="id16972198" alt="">
+    <image mime-type="image/jpg" src="../../media/Picture 4.jpg" width="400"/>
+  </media>
+  <caption>An atomistic model of a 90 base pair DNA nano-circle, showing the presence of explicit water molecules [1].</caption>
+</figure>
+
+<para id="fs-id11881553">This technique is known as atomistic molecular dynamics (MD) simulation. Biomolecules are naturally highly responsive materials, as is required by their function. Consequently, the most accurate simulations of biological macromolecules must also include a description of the solvent environment (see Figure 2), which usually consists of water and counterions. Typically, such a calculation will contain ~150,000 atoms, and will require over 750 CPU hrs to obtain a 1ns MD trajectory using the AMBER suite of MD programs. </para>
+    <para id="id16229588">An example of the use of atomistic simulation to develop new medicines is shown in Figure 1a. The protein Keap1 is responsible for inactivating protective anti-cancer genes, which the cell only uses under conditions of environmental or chemical stress [2]. It achieves this function by recognising components of the cellular machinery that ultimately detect and repair genetic damage, and tagging them for destruction. By designing synthetic molecules that block the action of Keap1, the aim is to enhance the natural ability of the cell to protect itself from cancerous agents, which could be beneficial to those facing a particularly high risk of developing cancer. Atomistic MD simulations can provide detailed chemical information about the specific inter-atomic interactions that drive molecular recognition between the Keap1 protein and its natural target. Understanding which of these interactions is most important will lead to the virtual design of synthetic molecules which mimic the natural substrate and block it binding. </para>
+    <para id="id11576602">All molecular recognition is ultimately driven by thermodynamics; the complex is formed because this lowers the overall free energy of the system. The protein recognises its target through shape specific favourable energetic interactions, such as van der Waals, electrostatic and hydrogen bonding interactions, all of which are encoded in the computer simulation of the complex. However, since the protein is a soft nanoscale object, the complex is also highly flexible, and it is important to include dynamics (specifically the entropy) to calculate the correct free energy change. The interaction energy between the protein and its complex is relatively straightforward to calculate using computational models. However, methods for calculating the entropic contribution are still under development [3]. The computational expense of the calculations limits MD timescales to ~100ns for a small protein. Since a molecule of this size executes very slow conformational changes that take place on a longer timescale than we are able to simulate, the full contribution from the entropy can be difficult to calculate accurately. As supercomputer resources continue to expand, and as simulation codes become more efficient, our ability to quantify dynamic changes will improve the virtual design of synthetic molecules which intervene in biological processes. </para>
+<section id="section2">
+   <title>Amyloid Fibril Simulation</title>
+    <para id="id6428460">In addition to molecular recognition, many biological molecules are also able to self-assemble in a remarkably specific manner. Microtubules, which are large cellular scaffolds formed from the polymerisation of many tubulin protein monomers, generate forces which drive cell motility by assembling and dissembling in a switchable manner. Amyloid fibrils are long fibrous structures that form when many copies of the same protein self-assemble through hydrogen bonding interactions along the peptide backbone. Although amyloid has been shown to have advantageous functions within cells, most remarkably amyloid has been shown to play a role in inheritance in yeast [4], amyloid fibrils are best known for their involvement in human diseases such as Alzheimer’s and Parkinson’s, and the transmissible (prion) diseases such as Creutzfeldt-Jakob disease [5]. Synthetic self-assembling peptides (see Figure 1b) have enormous potential as new nanomaterials, and have been tested for applications in molecular electronics, drug delivery and tissue engineering [6]. However, these systems are generally so structurally irregular that traditional experimental methods for investigating protein structure and function, such as X-ray crystallography, cannot be used to study them. </para>
+    <para id="id12907800">Computer simulations of amyloid-like fibrils can be used to generate model structures of small peptide aggregates at the atomic level, and are able to provide information about the interaction energies that drive the self-assembly. As well as providing new insight into the thermodynamics of disease, these methods can also be used in the design of synthetic self-assembling systems with engineered material properties. Nevertheless, there are many aspects of fibril growth that cannot currently be probed by atomistic simulation due to the length and timescales involved. Amyloid formation is a nucleated process, which implies that there is a “lag phase” due to a kinetic barrier to aggregation. It is therefore a slow process, and it is not computationally possible to study the kinetics of fibril formation in full atomic detail. Since the likelihood of developing Alzheimer’s, for example, may well depend on fibril growth rates, it is hoped that in the future there will be sufficient computational resources to investigate the sensitivity of amyloid formation to external factors such as cell pH, or the presence of metal ions such as copper and aluminium.</para>
+</section>
+<section id="section3">
+    <title>Future Directions for HPC in Computational Chemistry</title>
+    <para id="id7173824">The ability of biological macromolecules to function as nanoscale machines is particularly remarkable. DNA helicases can be some of the smallest molecular motors (see Figure 1c). They perform the essential function of separating double stranded DNA to provide access to the genetic code by burning the chemical energy provided by ATP hydrolysis. The catalysis step occurs over femtosecond timescales, and since it involves the breaking and formation of chemical bonds it requires quantum mechanical (QM) simulation methods, which are immensely computationally expensive. This chemical reaction is coupled to the large conformational changes that enable the motor to function, which take place over millisecond timescales, resulting in a machine that moves along DNA at a rate of around 50 DNA bases per second. Currently, only multi-scale methods which integrate models operating at different length and time-scales (in this case QM/ atomistic MD, and stochastic modelling) can be used to study even the smallest molecular motors. An exciting future prospect for high performance supercomputing is the expectation that it will be possible to study the entire thermodynamic cycle of such a nanoscale machine with sufficient accuracy to fully understand its mechanism. </para>
+</section>
+
+    <para id="id10983877"><emphasis>Acknowledgements: </emphasis>
+Many thanks to Geoff Wells and Binbin Liu for providing Figures 1a and 1b respectively.</para>
+    <para id="id16019674"><emphasis>References</emphasis></para>
+    <para id="id16167632">[1] Harris S. A., Laughton C. A. &amp; Liverpool T. B. “Mapping the phase diagram of the writhe of DNA nanocircles using atomistic molecular dynamics simulations” (2008) <emphasis effect="italics">Nucleic. Acids. Res</emphasis>. 36, 21-29.</para>
+    <para id="id8188206">[2] Lee J. &amp; Surh Y. “Nrf2 as a novel molecular target for chemoprevention” (2005) <emphasis effect="italics">Cancer Lett</emphasis>. 171-184.</para>
+    <para id="id9680384">[3] Harris S. A. &amp; Laughton C. A. “A simple physical description of DNA dynamics: quasi-harmonic analysis as a route to the configurational entropy” (2007) <emphasis effect="italics">J. Phys.:Condens. Matter. </emphasis>19, Art. No. 076103.</para>
+    <para id="id8173595">[4] Fowler D. M., Koulov A. V., Balch W. E. &amp; Kelly J. W. “Functional amyloid – from bacterial to humans” (2007) <emphasis effect="italics">Trends in Biochem. Sci.</emphasis> 32, 217-223.</para>
+    <para id="id7160708">[5] Chiti F. &amp; Dobson C. M. “Protein misfolding, functional amyloid and human disease” (2006) <emphasis effect="italics">Annu. Rev. Biochem</emphasis>. 75, 333-366. </para>
+    <para id="id6498840">[6] Cherny I. &amp; Gazit E. “Amyoids: Not only pathological agents but also ordered nanomaterials” (2008) <emphasis effect="italics">Angew. Chem. Int. Ed</emphasis>., 47, 4062-4069. </para>
+  </content>
+</document>

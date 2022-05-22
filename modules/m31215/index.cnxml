@@ -1,0 +1,59 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+
+<title>The European e-Infrastructure Ecosystem</title>
+<metadata>
+  <md:content-id>m31215</md:content-id><md:title>The European e-Infrastructure Ecosystem</md:title>
+  <md:abstract>In this section we will give a high level introduction to the European e-Infrastructure Ecosystem.</md:abstract>
+  <md:uuid>520fb961-47b9-4611-93b1-70d34992be07</md:uuid>
+</metadata>
+
+<content>
+  <para id="delete_me"><title>Key Concepts</title><list id="eip-id1165318909011">
+<item>Managed e-Infrastructures</item>
+<item>Different needs for general-purpose and specialised e-Infrastructures</item>
+<item>Layers of e-Infrastructures and the role of standards</item>
+<item>Academic and commercial e-Infrastructures</item>
+<item>Convergence of e-Infrastructures</item>
+</list>
+  </para><section id="eip-148"><title>Introduction</title><para id="eip-497">e-Research requires seamless access to computational, storage, and network resources, which can be provided by a variety of different means ranging from volunteer systems, to community based infrastructures, to general-purpose infrastructures federating resources across different institutions. These resources are made available to different scientific communities via well-defined protocols and interfaces exposed by a software layer (<emphasis>Grid middleware</emphasis>). Such federated infrastructures are referred to as <emphasis>e-Infrastructures</emphasis> and provide a number of advantages to researchers and service providers alike. 
+</para><para id="eip-439">Of these different approaches, well managed e-Infrastructures are of particular importance.  Apart from enabling seamless access to heterogeneous, independently managed resources, well managed e-Infrastructures also provide their users with common operational procedures such as accounting, support and support systems, and usage policies (etc). Moreover, different service levels can be negotiated, allowing the user to establish service level agreements with such an e-Infrastructure.  As a consequence, researchers experience the usage of an e-Infrastructure in the same way as using a single system managed by a local resource provider. It is important to realise that in order to achieve this deployment of standardised services is needed as well as a harmonization of operational and security procedures across the different independent resource providers. Multi-purpose e-Infrastructures are also desirable from a resource provider point of view, as a single infrastructure can serve several communities and thus reduce the need for dedicated community services that require additional operational effort. </para><para id="eip-228">However, it is unlikely that a single common infrastructure will eventually be able to serve <emphasis>all</emphasis> needs as different legislative regulations, usage models, and other regional or thematic peculiarities demand the creation of separate e-Infrastructures.  As a consequence, national and regional e-Infrastructures as well as thematic ones like e-Infrastructures focusing on the federation of supercomputing resources have emerged.  Europe, through ambitious national research and infrastructure programs and dedicated European Commission programs, is playing a leading role in building multi-national, multi-disciplinary e-Infrastructures and has devised a roadmap for a pan-European e-Infrastructure.  This road-map acknowledges the need for different infrastructures but also envisages these infrastructures embedded in an ecosystem that allows users to easily access resources managed by different infrastructures. </para></section><section id="eip-392"><title>Two Ecosystem Paths – the EGI and PRACE Infrastructures</title><para id="eip-685">
+The establishment of a European e-Infrastructure ecosystem is currently progressing along two distinct paths: the EGI and PRACE. The European Grid Initiative (EGI) intends to federate national and regional e-Infrastructures, managed locally by National Grid Initiatives (NGIs) into a pan-European, general-purpose e-Infrastructure as pioneered by the EGEE (Enabling Grids for E-sciencE) project that unites thematic, national and regional Grid initiatives. EGI is a direct result of the European e-Infrastructure Reflection Group (e-IRG) recommendation to develop a sustainable base for European e-Infrastructures. Most importantly, funding schemes are being changed from short term project funding (like 2 years funding periods in the case of EGEE) to sustained funding on a national basis. This provides researchers with the long-term perspective needed for multi-year research engagements. All European countries support the EGI vision and at the time of writing the organisational and legal details are being defined with the aim of starting EGI in 2010. 
+</para><para id="eip-903">Unlike EGEE, which has strong central control, EGI will consist of largely autonomous NGIs with a lightweight coordination entity on the European level. This setup asks for an increased usage of standardised services and operational procedures to enable a smooth integration of different NGIs exposing a common layer to the user while preserving their own autonomy. In this context the work of the Open Grid Forum (OGF) is of particular importance. OGF aims at standardising services for e-Infrastructures and increasingly tackles operational issues.</para><para id="eip-472">At the same time, the e-IRG has recognised the need to provide European researchers with access to petaflop-range supercomputers in addition to high-throughput resources that are prevailing in EGI. The Partnership for Advanced Computing in Europe (PRACE) aims to define the legal and organisational structures for a pan-European High Performance Computing (HPC) service in the petaflops range. These petaflop range systems are supposed to complement the existing European HPC e-Infrastructure as pioneered by the Distributed European Infrastructure for Supercomputing Applications (DEISA) project. DEISA is federating major European HPC centres in a common e-Infrastructure providing seamless access to supercomputing resources and, thanks to a global shared file system, data stored at the various centres. This leads to a three tier structure, with the European petaflops systems at tier 0 being supported by leading national systems at tier 1. Regional and midrange systems complement this HPC pyramid at tier-2 as depicted in Figure 1 below. </para><para id="eip-834"><figure id="PRACE_Pyramid">
+  <media id="PRACE_Pyramid_Image" alt="The PRACE HPC Ecosystem">
+    <image mime-type="image/png" src="../../media/PRACE_Pyramid.png"/>
+  </media>
+  <caption>
+     The PRACE HPC Ecosystem
+  </caption>
+</figure>
+</para><para id="eip-179">Although the goals of PRACE/DEISA are similar to the ones of EGI/EGEE, the different usage and organisational requirements demand a different approach and hence the establishment of two independent, yet related infrastructures. For researchers it is important, however, to have access to all infrastructures in a seamless manner, hence a convergence of the services and operational models in a similar way as discussed in the EGI/NGI case above will be needed. </para></section><section id="eip-133"><title>Layers of the Ecosystem</title><para id="eip-407">
+This convergence and the addition of other tools (like sensors, for instance) will eventually build the computing and data layer of the e-Infrastructure ecosystem. Leveraging the physically wide area connectivity provided by the network infrastructure (operated by GÈANT and the National Research and Education Networks in Europe) this computing and data layer facilitates the construction of domain specific knowledge layers that provide user communities with higher level abstractions, allowing them to focus on their science rather than the computing technicalities. The resulting three-layered ecosystem is depicted in Figure 2 below. 
+</para>
+<para id="fs-id1163907872371">
+<figure id="EcosystemLayer">
+  <media id="EcosystemLayer_Image" alt="e-Infrastructure Ecosystem">
+    <image mime-type="image/png" src="../../media/EcosystemLayers.png"/>
+  </media>
+  <caption>
+     e-Infrastructure Ecosystem
+  </caption>
+</figure>
+</para><para id="eip-424">Europe is also active in technology transfer to foster the usage of e-Infrastructures in other areas such as South America, India, China, Asia-Pacific and the Mediterranean. These efforts, together with similar efforts in the US, Japan, and Australia, ensure that large parts of the world are covered by e-Infrastructures as shown in Figure 3 below. </para>
+<para id="fs-id6131310">
+<figure id="e-InfCoverage">
+  <media id="e-InfCoverage_Image" alt="Worldwide e-Infrastructure Coverage">
+    <image mime-type="image/png" src="../../media/e-InfrastructureCoverage.png"/>
+  </media>
+  <caption>
+     Worldwide e-Infrastructure Coverage
+  </caption>
+</figure>
+</para>
+</section><section id="eip-814"><title>Clouds in the Ecosystem</title><para id="eip-908">
+In the commercial sector, dynamic resource and service provisioning as well as "pay per use" concepts are being pushed to the next level with the introduction of <emphasis>"cloud computing"</emphasis>, successfully pioneered by Amazon with their Elastic Compute Cloud (EC2) and Simple Storage Service (S3) offerings. Many other major IT businesses offer cloud services today, including Google, IBM, and Microsoft. Using virtualisation techniques, these infrastructures allow dynamic service provisioning and give the user the illusion of having access to virtually unlimited resources on demand. This computing model is particularly interesting for start-up ventures with limited IT-resources as well as for the dynamic provisioning of additional resources to cope with peak demands, rather than over-provisioning ones own infrastructure. As of today the usability of these commercial offerings for research remains yet to be shown although a few promising experiments have already been performed. In principle, clouds could be considered yet another resource provider in e-Infrastructures, however, it is currently not trivial to bridge the different interfaces and operational procedures to provide the researcher with a seamless infrastructure. More work on interface standardisation and on how commercial offerings can be made part of the operations of academic research infrastructures is needed. 
+</para></section><section id="eip-46"><title>Summary:  The Need for Convergence</title><para id="eip-32">
+In summary, a variety of different e-Infrastructures are available today to support e-Research. Convergence of these infrastructures in terms of interfaces and policies is needed to provide researchers with seamless access to the resources required for her research, independently of how the resource provisioning is actually managed. Eventually, a multi-layer ecosystem will greatly reduce the need for scientists to manage their computing and data infrastructure, with a knowledge layer eventually providing high-level abstractions according to the needs of different disciplines. Initial elements of such an e-Infrastructure ecosystem already exist and Europe is actively striving for sustainability to ensure that it continues to build a reliable basis for e-Research.  
+</para></section>
+</content>
+
+</document>

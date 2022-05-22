@@ -1,0 +1,76 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Examples of e-Research Videos - from the eIUS project</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32619</md:content-id>
+  <md:title>Examples of e-Research Videos - from the eIUS project</md:title>
+  <md:abstract>This module contains a collection of videos that describe Examples of e-Research.</md:abstract>
+  <md:uuid>dbed1790-46eb-407b-acc5-3ecd917c355c</md:uuid>
+</metadata>
+<content>
+<note id="eIUS_CC">
+The videos in this section have been produced by the <link url="http://www.eius.ac.uk">e-Infrastructure Use Cases and Service Usage Models project</link> and are licensed under a <link url="http://creativecommons.org/licenses/by-nc-nd/2.0/uk/">Creative Commons Attribution-Noncommercial-No Derivative Works 2.0 UK: England &amp; Wales License</link>.<newline/>
+<link url="http://creativecommons.org/licenses/by-nc-nd/2.0/uk/"><media id="cc_license1" alt="Creative Commons License"><image mime-type="image/png" src="http://i.creativecommons.org/l/by-nc-nd/2.0/uk/88x31.png"/></media></link></note>
+<section id="s_myExperiment">
+  <title>Bioinformatics</title>
+  <para id="p_myExperiment"><media id="myExperimentVideo" display="block" alt="Video about scientific workflows">
+  <flash id="yt-myExperiment" mime-type="application/x-shockwave-flash" src="http://www.youtube.com/v/Y6_Kz5L010g&amp;hl=en&amp;fs=1&amp;rel=0" width="640" height="480">
+    <param name="allowscriptaccess" value="always"/>
+    <param name="allowsfullscreen" value="true"/>
+  </flash>
+</media>
+</para>
+</section>
+<section id="s_Astronomy">
+<title>Astronomy</title>
+ <para id="p_Astronomy"><media id="AstronomyVideo" display="block" alt="Video about e-Infrastructure usage in astronomy">
+  <flash id="yt-Astronomy" mime-type="application/x-shockwave-flash" src="http://www.youtube.com/v/UDPy7-UHCOY&amp;hl=en&amp;fs=1&amp;rel=0" width="640" height="480">
+    <param name="allowscriptaccess" value="always"/>
+    <param name="allowsfullscreen" value="true"/>
+  </flash>
+</media>
+</para>
+</section>
+<section id="s_Archaeology">
+<title>Archaeology</title>
+ <para id="p_Archaeology"><media id="ArchaeologyVideo" display="block" alt="Video about e-Infrastructure usage in archaeology">
+  <flash id="yt-Archaeology" mime-type="application/x-shockwave-flash" src="http://www.youtube.com/v/LxZcI0ikKV0&amp;hl=en&amp;fs=1&amp;rel=0" width="640" height="480">
+    <param name="allowscriptaccess" value="always"/>
+    <param name="allowsfullscreen" value="true"/>
+  </flash>
+</media>
+</para>
+</section>
+<section id="s_EarthSciences">
+<title>Earth Sciences</title>
+ <para id="p_EarthSciences"><media id="EarthSciencesVideo" display="block" alt="Video about e-Infrastructure usage in astronomy">
+  <flash id="yt-EarthSciences" mime-type="application/x-shockwave-flash" src="http://www.youtube.com/v/HWjADafkji8&amp;hl=en&amp;fs=1&amp;rel=0" width="640" height="480">
+    <param name="allowscriptaccess" value="always"/>
+    <param name="allowsfullscreen" value="true"/>
+  </flash>
+</media>
+</para>
+</section>
+<section id="s_nanoCMOS">
+<title>nano-Electronics</title>
+  <para id="p_nanoCMOSvideo"><media id="nanoCMOSvideo" display="block" alt="Video about the nano-CMOS project">
+  <flash id="yt-nanoCMOS" mime-type="application/x-shockwave-flash" src="http://www.youtube.com/v/W70bz2JDJzw&amp;hl=en&amp;fs=1&amp;rel=0" width="640" height="480">
+    <param name="allowscriptaccess" value="always"/>
+    <param name="allowsfullscreen" value="true"/>
+  </flash>
+</media>
+</para>
+</section>
+<section id="s_CompChem">
+<title>Computational Chemistry</title>
+  <para id="p_CompChem"><media id="CompChemVideo" display="block" alt="Video about the computational analysis of organic crystal structures">
+  <flash id="yt-CompChem" mime-type="application/x-shockwave-flash" src="http://www.youtube.com/v/bkbRwOWmiwo&amp;hl=en&amp;fs=1&amp;rel=0" width="640" height="480">
+    <param name="allowscriptaccess" value="always"/>
+    <param name="allowsfullscreen" value="true"/>
+  </flash>
+</media>
+</para>
+</section>
+</content>
+
+</document>

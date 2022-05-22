@@ -1,0 +1,127 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Visualization Matters</title>
+  <metadata>
+  <md:content-id>m31926</md:content-id><md:title>Visualization Matters</md:title>
+  <md:abstract/>
+  <md:uuid>ed13cb6a-0ca0-40be-ada1-a4f1be9f104d</md:uuid>
+</metadata>
+
+<content>
+<para id="fs-id8169240">
+<emphasis effect="bold">Key Concepts</emphasis>
+    <list id="id6455863" list-type="bulleted"><item>Themes in the science of visualization</item>
+<item>Simulation models</item>
+<item>Visualization tools – graphs created using Excel and MATLAB</item>
+<item>Distributed visualization</item>
+<item>Metadata and Paradata for scientific visualization</item>
+    </list>
+</para>    
+    <section id="id7111983"><title>Introduction</title><para id="id5926179"><emphasis>"We don’t see with our eyes. We see with our brains",</emphasis> Paul Bach-y-Rita.</para>
+      <para id="id7139577">In the last thirty years computer-based visualization has moved from an informal <emphasis effect="italics">ad hoc</emphasis> tool designed to create particular results, to becoming a proper science in its own right. Universal generalisations and specifications as well as best practice guidelines are now available. Visualization methods are now being studied as an individual topic within various courses and modules; at all levels from undergraduate to postgraduate. Visualization is now the basis of numerous PhD titles and further research projects and programmes, funded across all the research councils and the infrastructure HE/FE funding agencies. This research and development has created a large toolkit for general use as well as individual methodologies for specialist user data sets, and has helped in understanding the barriers between the computer display and the human visual system. Visualization, it should be emphasised, is as much about gaining investigative insight as it is about enhancing presentations to tell a clearly specified story.</para>
+      <para id="id7251298">The science of visualization has been split into three themes; information visualization that studies methods for the representation of large-scale collections of often non-numerical information as well as the recommendations for use of graphical techniques to aid in the analysis of data. Scientific visualization, the second theme, was developed from previous often natural and experimental methods of displaying data, which has seen an explosion of users due to the deluge of in-silico experimental data (e.g. supercomputing and high throughput computing results) as well as real experimental capture equipment (e.g. 3D medical scanners, climate sensor data and astrophysical telescopes). Results often mimic reality, for example creating virtual wind-tunnel visualizations, but can be abstract, for example visualizing 6-dimensional tensor components using different geometric shapes (as in Figure 1). Visual analytics is the third theme. This merges both of these fields to focus on the user’s analytical reasoning, which often involves interactive visual interfaces and commonly employs various data-mining techniques as well as combining data across different databases.</para>
+      <para id="id7107138">This chapter introduces examples within these visualization themes, first providing an overview of simulation models and then specific examples from the creation of graphs using popular tools such as Excel and MATLAB. It then moves on to present the complexities of distributed visualization, as well as the role of adding metadata and paradata.</para>
+      <para id="id7189947"><figure id="eip-id13921528" orient="horizontal"><subfigure id="id6080138">
+          <media id="id6080138_media" alt="">
+            <image mime-type="image/png" src="../../media/graphics1-dbce.png" id="id6080138__onlineimage" height="152" width="233" print-width="2in"/>
+          </media>
+        </subfigure>
+        <subfigure id="id7176524">
+          <media id="id7176524_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics2.jpg" id="id7176524__onlineimage" height="156" width="212" print-width="2in"/>
+          </media>
+        </subfigure>
+        <subfigure id="id6456398">
+          <media id="id6456398_media" alt="">
+            <image mime-type="image/png" src="../../media/graphics3-76e9.png" id="id6456398__onlineimage" height="167" width="134" print-width="1.5in"/>
+          </media>
+        </subfigure>
+
+      <caption>Visualization examples: information visualization example showing the content of the ½ million files on my hard disc (<link url="http://www.win.tue.nl/sequoiaview/">Sequoiaview</link>); and two scientific visualizations, the first showing climate modelling using various animated glyphs to show flow strength (<link url="http://www.vsg3d.com/">Avizo</link>); and the second a selection of interactive superquadric glyphs selecting various forms from the six dimensions available within tensor stress components (<link url="http://www.avs.com/">AVS/Express</link>).</caption></figure>
+      </para>      
+    </section>
+    <section id="id6009502"><title>The Human Visual System: The User is Key.</title><para id="id7102772">Will Schroeder et al. in The Visualisation Toolkit (Schroder et al. 1998) stated <emphasis effect="italics">“informally visualisation is the transformation of data or information into pictures. Visualisation engages the primal human sensory apparatus, vision, as well as the processing power of the human mind. The result is a simple and effective medium for communicati</emphasis><emphasis effect="italics">ng</emphasis><emphasis effect="italics"> complex and/or voluminous information.”</emphasis> Based upon using the massive amount of brain power within the human visual system that constitutes about 1/3 of the total brain size, visualizations have been shown to be one of the best and sometimes the only way of conveying a huge amount of data in a short period of time. One of the key reasons for visualization as a specific field to study was the rapid increase in quantity of data being produced by simulations on supercomputers of physical, natural and theoretical problems. This has been termed as the data-deluge problem and frequently has been so large that graphical representations offer the only viable way to assimilate the data.</para>
+      <para id="id6217079">The simulation models themselves have also been increasing in complexity, involving large numbers of independent and dependent variables whose relationships need to be understood. For example, in climate modelling, we may wish to explore how temperatures, water vapour content, pressure, wind directions and velocities vary within a 3D region, over time and all at once. The process of visualization is therefore concerned with ways to represent the data as well as defining tools for interactively exploring the multidimensional and multi-variant models. One of the early active research areas was to find ways to link this visualization process with interactive control of the simulations themselves, opening up completely new possibilities for interactive exploration and understanding of complex phenomena. Over the years a number of visualization systems have emerged, which provide a framework for this kind of model exploration.</para>
+    </section>
+    <section id="id7032846"><title>Visualization Tools: Evaluating a Graph</title><para id="id5928316">Plenty of literature and course notes are now available but as a simple example, a few rules are presented next on how to create an effective graph. A graph should present a reasonable amount of data, say something about the behaviour of that data and it should avoid giving a false impression of the data. In other words, the graph must communicate something. Tukey (1977) pp 128,157 said <emphasis effect="italics">“</emphasis><emphasis effect="italics">t</emphasis><emphasis effect="italics">here cannot be too much emphasis on our need to see behaviour. Graphs force us to note the unexpected; nothing could be more important”</emphasis><emphasis effect="italics">.</emphasis></para>
+      <para id="id6803175">Excel and MATLAB are two of the most popular visualization tools currently used, even though users may not consider them as such. They produce numerous 2D and 3D graphs of different sizes and dimensions but the visualization choices are rarely thought about. Figure 2 shows two views using MATLAB of a simple formulae (y = (x-1)<sup>-2</sup> + 3(x-2)<sup>-2</sup>).  Both show the same numerical sampled data but the second, by cropping the y-axis to a limited range [0:50], could be said to present a large amount of extra information highlighting an important area. This process has been termed focus and context zoom interaction.</para>
+      <para id="id6465306">
+<figure id="eip-id1171264457124">
+        <subfigure id="id7081836">
+          <media id="id7081836_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics4.jpg" id="id7081836__onlineimage" height="177" width="236"/>
+          </media>
+        </subfigure>
+        <subfigure id="id6859319">
+          <media id="id6859319_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics5.jpg" id="id6859319__onlineimage" height="176" width="234"/>
+          </media>
+        </subfigure>
+        <caption>
+The default and a cropped version of the numerical evaluation of the MATLAB plot command for the formulae (y = (x-1)<sup>-2</sup> + 3(x-2)<sup>-2</sup>).
+        </caption>
+        </figure>
+      </para>      
+      <para id="id7183891">Users make choices about the data to be used and its visualization, and these affect both the quality and the quantity of the information presented. Good visualization requires graphical integrity and there are many standard techniques to help quantify and qualify between different versions. As a short exercise three well used simple objective tests (adapted from Tufte (2001)) are presented here as applied to the data shown in Figure 3.</para>
+      <list id="id6971239" list-type="bulleted"><item><emphasis effect="italics">Objective Test 1:</emphasis> The <emphasis effect="bold">Lie Factor</emphasis> emphasises the variation in the data which can cause misleading interpretations. The variation in height of the smallest and largest bars in the graph on the left is (74 - 56) / (63 - 56) = 2.57; however, the variation in the data is 74 / 63 = 1.17. These two numbers being different indicate how visually the variations appear more extreme on the left-hand graph.</item>
+        <item><emphasis effect="italics">Objective Test 2:</emphasis> The <emphasis effect="bold">Data Ink</emphasis> represents the non-erasable items of a graphic and often represents the non-redundant ink. The horizontal grid lines, tick marks and the frame around the graph are all erasable – and can be, within reason, as they may distract more than guide the observer.</item>
+        <item><emphasis effect="italics">Objective Test 3:</emphasis> The <emphasis effect="bold">Data Density </emphasis>represents the ratio defined as the number of entries in the data matrix divided by the area of the data graphic. In this case by removing frames the data density of the right-hand graph slightly increases.</item>
+      </list>
+      <para id="id7107732">
+        <figure id="eip-id8366809"><subfigure id="id6798329">
+          <media id="id6798329_media" alt="">
+            <image mime-type="image/png" src="../../media/graphics6.png" id="id6798329__onlineimage" width="360"/>
+          </media>
+        </subfigure>
+        <subfigure id="id6667928">
+          <media id="id6667928_media" alt="">
+            <image mime-type="image/png" src="../../media/graphics7.png" id="id6667928__onlineimage" width="360"/>
+          </media>
+        </subfigure>
+        
+        <caption>An Excel bar chart example showing the statistics of the number of dives for a Female Elephant Seal in early February 1991 (numbers and example adapted from Tufte 1997). The graph on the left is the default format.
+        </caption></figure>
+      </para>
+      <para id="id7112098">It is possible and recommended to try these kinds of tests and many others on any images including those found in national newspapers.</para>
+    </section>
+    <section id="id5915765"><title>Distributed Visualization: Massive Datasets</title><para id="id7032553">The visualization of large datasets has become a new key bottleneck in applications where validation of results and data acquisition from scientific equipment is required at an early stage. Such validation would allow correctness of methods (such as the set up of a physical experiment) to be determined prior to further spending of computational or imaging machine resources. Datasets can far exceed the capabilities of modern graphics hardware (GPUs) and so visualization systems are turning to parallel compute facilities to render them. </para>
+      <para id="id7194712">Figure 4 shows a use case of a current system being developed. Here multiple render processes are executed to render small sections of a decomposed dataset (right hand side). In this case the GPU output from each render process is visible; although usually these windows are not visible and only the left hand composite image is shown. However, this conveys the idea of distributed rendering with the final composited image, shown on the left, viewable by the user. This final real-time interactive image can be transmitted across the internet at fast rates (experience is about 15 frames per second across countries), to be displayed within an application window (as shown), within a portal, or within a Virtual Learning or Research Environment. There is no current national based visualization service in the UK; but various test services exist within JISC and research council funded projects, including on the National Grid Service (NGS <link url="http://www.ngs.ac.uk/">http://www.ngs.ac.uk/</link>) and two initiatives currently running on the UK national supercomputing service (HECToR <link url="http://www.hector.ac.uk/">http://www.hector.ac.uk/</link>) are leading the way. </para>
+<para id="eip-id6551168">
+      <figure id="id7250131"><media id="id7250131_media" alt="">
+          <image mime-type="image/png" src="../../media/graphics10.png" id="id7250131__onlineimage" height="281" width="599"/>
+        </media>
+        
+      <caption>End-user volume viewer application (left) displays a composited image from raycasting volume rendering processes running in parallel on the four cluster nodes (right). AVS/Express pre-test version for the MRBV (Massive Remote Batch Visualizer) project running on a <link url="http://www.hector.ac.uk">CRAY XT4</link>.
+        </caption></figure>
+</para>
+    </section>
+    <section id="id7063298"><title>Making Choices: Metadata and Paradata</title><para id="id6063935">Rules can be broken with the addition of appropriate metadata, and this has been known for a long time. The addition of good metadata including all forms of annotations is very important even if it takes time and careful thought. Metadata can include all details describing the source of the data, the methods used to pre-manipulate the data and create the visualization, as well as the contact details of the author, creation date etc. Recently there have been tools developed to help record this process. These include the development of software within e-Science, creating a set of middleware linking computing resources together – adding semantic tags which define meaning to these components – and creating ontologies, which describe how human terms relate to computer terms. </para>
+      <para id="id6159610">A proposal is to add paradata that extends the concept of metadata to consider issues of choice and alternatives by recording the subjective decisions. For example, Figure 5 shows fourteen different visualization variations for a simple vortex fluid flow data set. Often only one or two images will be used to illustrate a specific scientific phenomenon, but it is very rarely considered in detail what decisions have been make and it is even rarer for these decisions to be written down, as to why a particular version has been chosen. The use of paradata would now allow and even force the authors to describe the reasons for their choices. </para>
+      
+      <para id="id7112998">It is said that an image is worth a thousand words, but we can rephrase this to say a good visualization may need a thousand words of annotations, in both metadata and paradata, in order to properly describe it.</para>
+      <figure id="id6466167">
+        <media id="id6466167_media" alt="">
+          <image mime-type="image/png" src="../../media/graphics11.png" id="id6466167__onlineimage" height="225" width="605"/>
+        </media>
+<caption>Fourteen different versions of scientific visualizations for the same data flow field (McDerby 2007).
+</caption>
+      </figure>
+      <para id="id6414889">A couple of solutions to address visualization are the introduction of recordable and shareable workflows (<link url="http://www.myexperiment.org/">myExperiment</link>), and the controlled recording of researchers' choices creating a visualization provenance (<link url="http://www.vistrails.org">VisTrails</link>). These and similar tools are going to be more available within VREs (<link url="http://www.jisc.ac.uk/whatwedo/programmes/vre1.aspx">Virtual Research Environments</link>) that are already considering the use of collaborative environments; including an emphasis on the web 2.0 generic principles of being able to store and annotate everything. </para>
+    </section>
+    <section id="id7043935"><title>Conclusions: “Lying” with Visualizations</title><para id="id5902270">They always say you can lie with statistics, but similarly you can lie with visualizations as well. This is especially true as visualizations not only can be selective in choice of data, but as they employ the human visual system they can create visual illusions as well. Often this process is not deliberate but is accidentally misleading, caused by authors who only have space for a few visualizations and make quick, possibly uninformed, decisions. </para>
+      <para id="id6668513">We have presented a few very simple examples to describe how small changes can improve the presentation of information. Also we have given a warning that without defining and describing the choices made, through metadata and possibly paradata, there can be confusion. Fortunately there are now methods, just starting to be introduced, to help in the process, although more need to be actively used, tested and developed.</para>
+    </section>
+    <section id="id6214560">
+      <title>Acknowledgement</title>
+      <para id="id6393651">At the University of Manchester, Research Computing Services, starting with the Computer Graphics Unit, has for over 30 years been considering how to efficiently create and present visual stimuli and is still learning the best way to integrate and transfer information from computer source to the human user. Thanks to all those who indirectly have contributed ideas to this short article from numerous sources (including the <link url="http://wiki.rcs.manchester.ac.uk/community/Viz_for_HPC">MSc module taught at Manchester</link>). It is recommended that readers explore the topic further as this barely covered the topic. 
+
+Dr Martin J. Turner, the University of Manchester, and part of the JISC funded national <link url="http://www.viznet.ac.uk/">vizNET</link> support network, Martin.Turner@manchester.ac.uk.</para><section id="eip-413"><title>References</title><para id="eip-473">
+Schroeder, W., Martin, K. and Lorensen, B. (1998) The Visualization Toolkit Prentice Hall 1998 2nd Edition
+</para><para id="eip-532">Tukey, J. W. (1977) Exploratory Data Analysis. Addison-Wesley, Reading, MA
+
+</para><para id="eip-622">Tufte, E.R. (2001) The Visual Display of Quantitative Information Graphics Press, Cheshire, Connecticut 2nd Edition
+
+</para><para id="eip-800">Tufte, E.R. (1997) Visual Explanations: Images and Quantities, Evidence and Narrative Graphics Press Cheshire, Connecticut
+</para></section>
+    </section>
+  </content>
+</document>

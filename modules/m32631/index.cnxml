@@ -1,0 +1,102 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>e-Research Glossary</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32631</md:content-id>
+  <md:title>e-Research Glossary</md:title>
+  <md:abstract>A glossary of terms used in e-Research.</md:abstract>
+  <md:uuid>7dd227d6-b2e2-44c9-95fb-15ce51ee7bdd</md:uuid>
+</metadata>
+
+<content>
+  <para id="delete_me">In this section we define a number of terms used in the 
+Research in a Connected World book. We have aimed to keep these definitions 
+simple to aid understanding of the core concepts rather than trying to come up 
+with definitive definitions of what are often very complex and ill-defined 
+concepts.</para><para id="eip-370">
+<definition id="cloud">
+  <term>Cloud</term>
+  <meaning id="fs-id3368065">
+  An infrastructure that makes use of virtualisation technologies to provide on-
+demand services to users. Clouds provide access to dynamically scalable 
+resources reserved for individual users within a shared infrastructure. Like 
+grids, clouds can be private (in-house), community-specific or public. Access to 
+clouds is often provided through <link target-id="webService">web 
+services</link>.
+  </meaning>
+  <seealso>
+    <term><link target-id="grid">Grid</link></term>
+    <term><link target-id="webService">Web Service</link></term>
+  </seealso>
+</definition>
+<definition id="grid"><term>Grid</term>
+  <meaning id="meaning">
+  A type of distributed computing infrastructure. Grids can exist within 
+  organisations (private grids, campus grids) but often span organisational 
+  boundaries. The <link document="m32047">The EGEE grid infrastructure</link>
+  is an example of an international grid infrastructure.
+  </meaning>
+  <seealso>
+    <term><link target-id="cloud">Cloud</link></term>
+  </seealso>
+</definition>
+<definition id="ontology"><term>Ontology</term>
+<meaning id="monto">
+A description of a set of concepts and their relationships within a given domain. Ontologies can be used as a basis for automatic reasoning.
+</meaning>
+</definition>
+<definition id="rdf"><term>RDF</term>
+<meaning id="mrdf">
+Resource Description Framework: a set of specifications for data representation 
+that facilitate the conceptual representation of data by forming subject-
+predicate-object style expressions. RDF is a core component of the 
+<link target-id="semanticWeb">Semantic Web</link>
+</meaning>
+<seealso>
+  <term><link target-id="ontology">Ontology</link></term>
+  <term><link target-id="semanticWeb">Semantic Web</link></term>
+</seealso>
+</definition>
+<definition id="restfulService"><term>REST(-ful) Service</term>
+  <meaning id="eip-id13869301">
+    A <link target-id="webService">web service</link> that follows specific 
+    architectural principles. More often than not, REST-ful services are
+    implementing the standard <link target-id="http">HTTP protocol</link>.
+  </meaning>
+  <seealso>
+    <term><link target-id="webService">Web Service</link></term>
+    <term><link target-id="http">HTTP Protocol</link></term>
+  </seealso>
+</definition>
+<definition id="semanticWeb">
+<term>Semantic Web</term>
+<meaning id="msemweb">
+  The plan to 'semantically annotate' data that is available on the web, thus enabling it to be processed more automatically. An example is that a postal address would not be just written like an address (making it recognisable by a human reader as an address) but also be 'tagged' so that a computer can relate the data to the concept of a postal address.
+</meaning>
+<seealso>
+  <term><link target-id="rdf">RDF</link></term>
+</seealso>
+</definition>
+<definition id="webService"><term>Web Service</term>
+  <meaning id="webServiceMeaning">
+    A service that can be invoked across a network using an machine-to-machine 
+    interface that ensures interoperability across system boundaries.
+  </meaning>
+  <seealso>
+    <term><link target-id="restfulService">REST(-ful) service</link></term>
+    <term><link target-id="wsdl">WSDL</link></term>
+  </seealso>
+</definition>
+<definition id="wsdl"><term>WSDL</term>
+  <meaning id="wsdlMeaning">
+    Web Services Description Language: a language used to describe 
+<link target-id="webService">web service</link> interfaces, specifying the 
+methods available 
+and their parameters.
+  </meaning>
+<seealso>
+  <term><link target-id="webService">Web Service</link></term>
+</seealso></definition></para>
+</content>
+
+</document>
