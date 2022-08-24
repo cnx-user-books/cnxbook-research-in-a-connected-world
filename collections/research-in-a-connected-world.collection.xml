@@ -1,12 +1,13 @@
-<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en">
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" authors="Alex Voss ,Elizabeth Vander Meer ,David Fergusson">
   <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
     <md:content-id>col10677</md:content-id>
     <md:title>Research in a Connected World</md:title>
     <md:language>en</md:language>
     <md:license url="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</md:license>
     <md:uuid>5689f12d-b2c9-4fee-9078-50a4bd653b9a</md:uuid>
-<md:slug>research-in-a-connected-world</md:slug>
-</metadata>
+    <md:slug>research-in-a-connected-world</md:slug>
+  </metadata>
   <col:content>
     <col:module document="m32854"/>
     <col:module document="m32855"/>
